@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package go.micro.service.immoc;
+
+option go_package=".;proto";
+
+service Cap{
+    rpc SayHello(SayRequest)returns(SayResponse){}
+}
+
+message SayRequest{
+    string message =1;
+}
+
+message SayResponse{
+    string answer = 1;
+}

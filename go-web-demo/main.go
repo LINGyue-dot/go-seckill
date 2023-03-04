@@ -12,7 +12,6 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Form)
 	fmt.Println("path", r.URL.Path)
 	fmt.Print("schema", r.URL.Scheme)
-
 	for k, v := range r.Form {
 		fmt.Println("key:", k)
 		fmt.Println("val:", strings.Join(v, ""))
