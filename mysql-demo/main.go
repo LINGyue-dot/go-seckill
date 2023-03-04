@@ -14,7 +14,7 @@ type User struct {
 }
 
 func main() {
-	DB, _ := sql.Open("mysql", "vze:csz51628@+@tcp(123.249.35.73:3306)/vze_db")
+	DB, _ := sql.Open("mysql", "${username}:${password}@tcp(123.249.35.73:3306)/vze_db")
 	//设置数据库最大连接数
 	DB.SetConnMaxLifetime(100)
 	// 设置上数据库最大闲置连接数
